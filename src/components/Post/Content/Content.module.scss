@@ -1,0 +1,308 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.content {
+  max-width: $layout-post-single-width;
+  padding: 0 $layout-mobile-padding;
+  margin: 0 auto;
+
+  &__title, &__subtitle, &__date {
+    max-width: $layout-post-width;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: $typographic-base-font-size * 2;
+    @include line-height(1.5);
+    @include margin-top(1);
+  }
+
+  &__subtitle {
+    font-weight: normal;
+    color: $typographic-light-font-color;
+    font-size: $typographic-base-font-size * 1.5;
+    @include line-height(1.125);
+    @include margin-top(0.2);
+  }
+
+  &__date {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: $typographic-small-font-size;
+    @include margin-top(0.3);
+    @include margin-bottom(0.75);
+  }
+
+  &__body {
+    p, li {
+      font-size: $typographic-base-font-size * 1.125;
+      @include line-height(1.125);
+    }
+
+    p {
+      @include margin-bottom(1);
+    }
+
+    & > * {
+      width: 100%;
+      max-width: $layout-post-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    hr {
+      width: 50%;
+      min-width: 200px;
+    }
+
+    video {
+      display: block;
+      @include margin-top(1.5);
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    blockquote {
+      border-left: 2px solid $color-gray;
+      margin: 0;
+      margin-left: -$layout-mobile-padding;
+      padding: 0 0 0 ($layout-mobile-padding - 2px);
+      font-style: italic;
+      font-size: $typographic-base-font-size;
+      font-weight: 300;
+
+      strong {
+        font-weight: 600;
+      }
+
+      a {
+        font-weight: normal;
+      }
+    }
+
+    iframe {
+      border: none;
+      outline: none;
+    }
+
+    figure {
+      @include margin-bottom(1.5);
+    }
+
+    table {
+      background-color: $color-gray-bg;
+      @include padding-equal(0.25);
+      border-spacing: 5px;
+
+      th {
+        border-bottom: 1px solid $color-primary;
+      }
+
+      td {
+        text-align: center;
+      }
+    }
+
+    code[class*='language-'] {
+      font-size: $typographic-base-font-size * 1;
+      color: $typographic-base-font-color;
+      font-style: normal;
+      padding: 3px 4px;
+    }
+
+    // stylelint-disable
+    // stylelint doesn't recognize :global() from css-modules
+    :global(.gatsby-highlight) {
+      margin-left: -$layout-mobile-padding;
+      margin-right: -$layout-mobile-padding;
+      width: unset;
+      max-width: unset;
+    }
+
+    :global(.gatsby-highlight pre[class*='language-']) {
+      @include margin-top(0);
+      @include line-height(0.8);
+      @include padding-equal(0.5);
+      padding-left: $layout-mobile-padding;
+    }
+
+    :global(.gatsby-highlight code[class*='language-']) {
+      padding: 0;
+      font-size: $typographic-base-font-size * 0.9;
+    }
+
+    // From https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/
+    :global(.gatsby-highlight-code-line) {
+      background-color: $color-primary-light;
+      display: block;
+      margin-right: -1em;
+      margin-left: -1em;
+      padding-right: 1em;
+      padding-left: 0.75em;
+      border-left: 0.2em solid $color-primary;
+    }
+
+    :global(.gatsby-code-header) {
+      margin-left: -$layout-mobile-padding;
+      @include margin-top(0.5);
+    }
+
+    :global(.gatsby-code-header) h5 {
+      margin: 0;
+      @include padding(0.1, 0.75, 0.1, 0.75);
+      display: inline-block;
+      background-color: rgb(245, 242, 240);
+      border-top-right-radius: 5px;
+      border-bottom: 1px solid $color-gray-shadow;
+    }
+
+    :global(.token.operator) {
+      background: initial;
+    }
+
+    :global(.checkmark) {
+      color: $color-secondary;
+      font-weight: bold;
+    }
+
+    :global(.emph-special) {
+      color: darken($color-secondary, 8%);
+      font-style: italic;
+    }
+
+    :global(.inline-images-container) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    :global(.inline-image-wrapper) {
+      display: inline-block;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+
+    :global(.spacing) {
+      @include padding(0.3, 0, 0.3, 0);
+    }
+
+    :global(.with-shadow) {
+      box-shadow: 0 0 15px $color-gray-border;
+    }
+
+    :global(.katex-display) {
+      margin: 1em auto;
+    }
+
+    :global(.katex) {
+      font-size: $typographic-base-font-size * 1.25;
+      border-spacing: 0;
+    }
+
+    :global(.crossed-out) {
+      text-decoration: line-through;
+    }
+
+    :global(a.no-underline) {
+      text-decoration: none;
+    }
+
+    :global(a.anchor) {
+      display: none;
+    }
+    // stylelint-enable
+
+    & img {
+      width: initial;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@include breakpoint-sm {
+  .content {
+    &__body {
+      blockquote {
+        margin: 0 auto;
+        padding: 0 23px 0 25px;
+      }
+
+      // stylelint-disable
+      // stylelint doesn't recognize :global() from css-modules
+      :global(.gatsby-highlight) {
+        margin: 0 auto;
+        width: 100%;
+        max-width: $layout-post-width;
+      }
+
+      & :global(.gatsby-highlight pre[class*='language-']) {
+        border-radius: 5px;
+        @include padding-equal(0.6);
+      }
+
+      & :global(.gatsby-highlight code[class*='language-']) {
+        font-size: $typographic-base-font-size * 1;
+      }
+
+      & :global(.gatsby-code-header) + :global(.gatsby-highlight) pre[class*='language-'] {
+        border-top-left-radius: 0;
+      }
+
+      :global(.gatsby-code-header) {
+        margin-left: auto;
+      }
+
+      :global(.gatsby-code-header) h5 {
+        @include padding(0.1, 1, 0.1, 1);
+        border-top-left-radius: 5px;
+      }
+
+      :global(.spacing) {
+        @include padding(0.5, 0, 0.5, 0);
+      }
+
+      :global(a.anchor) {
+        display: initial;
+      }
+      // stylelint-enable
+    }
+  }
+}
+
+@include breakpoint-md {
+  .content {
+    padding: 0;
+
+    &__title {
+      font-size: $typographic-base-font-size * 2.5;
+      @include line-height(2);
+      @include margin-top(1.5);
+    }
+
+    &__subtitle {
+      font-size: $typographic-base-font-size * 1.875;
+      @include line-height(1.5);
+    }
+
+    &__date {
+      @include margin-bottom(1);
+    }
+
+    &__body {
+      p, li {
+        font-size: $typographic-base-font-size * 1.25;
+        @include line-height(1.25);
+      }
+
+      p {
+        @include margin-bottom(1.125);
+      }
+    }
+  }
+}

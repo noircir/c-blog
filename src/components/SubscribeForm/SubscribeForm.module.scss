@@ -1,0 +1,89 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.container {
+  background-color: $color-gray-bg;
+  @include padding-equal(0.5);
+  @include margin-bottom(0.5);
+
+  * {
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: $typographic-base-font-size * 0.9;
+    @include line-height(0.8);
+  }
+
+  form {
+    text-align: center;
+  }
+
+  input[type='email'] {
+    border-bottom: 1px solid $color-gray;
+    padding: 5px 10px;
+    font-size: $typographic-base-font-size * 0.9;
+    background-color: transparent;
+    @include margin-top(0.1);
+    @include transition(border-bottom-color);
+
+    &:hover, &:focus {
+      border-bottom: 1px solid $color-primary;
+    }
+  }
+
+  input[type='submit'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 3px;
+    background-color: $color-primary;
+    color: white;
+    font-size: $typographic-base-font-size * 0.75;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px 30px;
+    @include margin-top(0.3);
+    @include transition(background-color);
+
+    &:hover {
+      background-color: $color-secondary;
+      cursor: pointer;
+    }
+  }
+}
+
+@include breakpoint-sm {
+  .container {
+    border-radius: 5px;
+    @include margin-bottom(0.75);
+  }
+}
+
+@include breakpoint-md {
+  .container.large {
+    @include padding-equal(1);
+    @include margin-bottom(0.75);
+
+    p {
+      font-size: $typographic-base-font-size * 1.2;
+      @include line-height(1.1);
+    }
+
+    input[type='email'] {
+      padding: 8px 40px;
+      font-size: $typographic-base-font-size * 1.2;
+      @include margin-top(0.25);
+    }
+
+    input[type='submit'] {
+      font-size: $typographic-base-font-size * 0.9;
+      padding: 15px 40px;
+      @include margin-top(0.5);
+    }
+  }
+}
+
+.container.no-spacing {
+  margin: 0;
+  padding: 0;
+}

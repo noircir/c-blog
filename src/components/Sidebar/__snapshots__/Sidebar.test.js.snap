@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar renders correctly 1`] = `
+<div
+  className="sidebar"
+>
+  <div
+    className="sidebar__inner"
+  >
+    <div
+      className="author"
+    >
+      <div
+        className="author__main-section"
+      >
+        <Link
+          to="/"
+        >
+          <img
+            alt="name"
+            className="author__photo"
+            src="/photo.png"
+          />
+        </Link>
+        <h2
+          className="author__title"
+        >
+          <Link
+            className="author__title-link"
+            to="/"
+          >
+            name
+          </Link>
+           
+          <a
+            href="https://twitter.com/victorczhou"
+            style={
+              Object {
+                "fontWeight": 500,
+              }
+            }
+            target="_blank"
+          >
+            @victorczhou
+          </a>
+        </h2>
+      </div>
+      <p
+        className="author__subtitle"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "bio",
+          }
+        }
+      />
+    </div>
+    <StaticQuery
+      render={[Function]}
+    />
+    <StaticQuery
+      render={[Function]}
+    />
+  </div>
+</div>
+`;

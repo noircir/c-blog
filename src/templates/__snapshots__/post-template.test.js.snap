@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostTemplate renders correctly 1`] = `
+<div>
+  <div
+    className="header"
+  >
+    <div
+      className="header__left"
+    >
+      <StaticQuery
+        render={[Function]}
+      />
+    </div>
+    <div
+      className="header__right"
+    >
+      <StaticQuery
+        render={[Function]}
+      />
+    </div>
+  </div>
+  <StaticQuery
+    render={[Function]}
+  />
+  <div
+    className="container hidden"
+  >
+    <h4
+      className="title"
+    >
+      At least this isn't a full screen popup
+    </h4>
+    <p
+      className="description"
+    >
+      That would be more annoying. Anyways, if you like what you're reading, consider subscribing to my newsletter! I'll notify you when I publish new posts - no spam.
+    </p>
+    <div
+      className="container  no-spacing"
+    >
+      <form
+        action="https://victorzhou.us20.list-manage.com/subscribe/post?SIGNUP=Popup%3Atest"
+        method="post"
+        target="_blank"
+      >
+        <input
+          name="u"
+          type="hidden"
+          value="7cd5089a9bbc5253e6890ae15"
+        />
+        <input
+          name="id"
+          type="hidden"
+          value="9f367a1f47"
+        />
+        <input
+          aria-label="Email Address"
+          autoCapitalize="off"
+          autoCorrect="off"
+          name="MERGE0"
+          onKeyDown={[Function]}
+          placeholder="example@domain.com"
+          size="25"
+          type="email"
+        />
+        <br />
+        <input
+          name="submit"
+          type="submit"
+          value="SUBSCRIBE"
+        />
+      </form>
+    </div>
+    <button
+      className="close"
+      onClick={[Function]}
+    >
+      ✕
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "position": "absolute",
+        "right": "calc(((100% - 700px) / 2 - 150px) / 2)",
+        "top": "calc((100% - 217px) / 2)",
+      }
+    }
+  >
+    <div
+      className="container-large"
+    />
+  </div>
+</div>
+`;

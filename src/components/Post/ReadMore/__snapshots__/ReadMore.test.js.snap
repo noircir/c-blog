@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReadMore renders correctly 1`] = `
+<div
+  className="readmore"
+>
+  <h4
+    className="readmore-title"
+  >
+    YOU MIGHT ALSO LIKE
+  </h4>
+  <div
+    className="readmore-links"
+  >
+    <div>
+      <a>
+        <b />
+      </a>
+      <p>
+        <b>
+          March 14, 2019
+        </b>
+      </p>
+      <p />
+    </div>
+    <div>
+      <a>
+        <b />
+      </a>
+      <p>
+        <b>
+          March 14, 2019
+        </b>
+      </p>
+      <p />
+    </div>
+  </div>
+</div>
+`;

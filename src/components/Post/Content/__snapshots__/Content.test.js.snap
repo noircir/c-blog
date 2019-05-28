@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content renders correctly 1`] = `
+<article
+  className="content"
+>
+  <h1
+    className="content__title"
+  >
+    test
+  </h1>
+  <h2
+    className="content__subtitle"
+  />
+  <p
+    className="content__date"
+  >
+    <time>
+      February 04, 2019
+    </time>
+  </p>
+  <div
+    className="content__body"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<p>test</p>",
+      }
+    }
+  />
+</article>
+`;
